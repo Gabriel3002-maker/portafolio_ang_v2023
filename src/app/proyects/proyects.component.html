@@ -1,0 +1,123 @@
+<div class="flex justify-center m-5">
+    <p class="text-3xl font-bold text-gray-800">Proyectos</p>
+  </div>
+  
+  <div class="flex justify-center m-2">
+    <div >
+      <mat-tab-group>
+          
+       
+        <mat-tab label="Python">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+              <mat-card *ngFor="let project of python" class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition-shadow duration-300">
+                <mat-card-header class="flex items-center p-4 bg-gray-200">
+                  <div>
+                    <mat-card-title class="text-xl font-semibold text-gray-800">{{ project.name }}</mat-card-title>
+                    <mat-card-subtitle class="text-sm text-gray-500">
+                      <mat-chip class="bg-gray-300">{{ project.language }}</mat-chip>
+                    </mat-card-subtitle>
+                  </div>
+                </mat-card-header>
+    
+                <!-- Imagen del repositorio -->
+                <img mat-card-image 
+                     [src]="project.image ? project.image : 'https://www.svgrepo.com/show/448449/git-repo.svg'" 
+                     alt="Imagen del proyecto" 
+                     class="w-full object-cover h-48">
+    
+                <mat-card-content class="p-4">
+                  <p class="text-base text-gray-700 font-semibold">
+                    <span class="block mb-2">{{ project.description }}</span>
+                  </p>
+                </mat-card-content>
+    
+                <mat-card-actions class="flex justify-between p-4">
+                  <div class="flex items-center">
+                    <a href="{{ project.homepage }}" target="_blank" class="inline-flex items-center py-2 px-4 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                      <mat-icon class="mr-2">launch</mat-icon> Go to
+                    </a>
+                  </div>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+        </mat-tab>
+          
+          <!-- Web Tab -->
+        <mat-tab label="Typescript">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+              <mat-card *ngFor="let project of typescript" class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition-shadow duration-300">
+                <mat-card-header class="flex items-center p-4 bg-gray-200">
+                  <div>
+                    <mat-card-title class="text-xl font-semibold text-gray-800">{{ project.name }}</mat-card-title>
+                    <mat-card-subtitle class="text-sm text-gray-500">
+                      <mat-chip class="bg-gray-300">{{ project.language }}</mat-chip>
+                    </mat-card-subtitle>
+                  </div>
+                </mat-card-header>
+    
+                <!-- Imagen del repositorio -->
+                <img mat-card-image 
+                     [src]="project.image ? project.image : 'https://www.svgrepo.com/show/448449/git-repo.svg'" 
+                     alt="Imagen del proyecto" 
+                     class="w-full object-cover h-48">
+    
+                <mat-card-content class="p-4">
+                  <p class="text-base text-gray-700 font-semibold">
+                    <span class="block mb-2">{{ project.description }}</span>
+                  </p>
+                </mat-card-content>
+    
+                <mat-card-actions class="flex justify-between p-4">
+                  <div class="flex items-center">
+                    <a href="{{ project.homepage }}" target="_blank" class="inline-flex items-center py-2 px-4 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                      <mat-icon class="mr-2">launch</mat-icon> Go to
+                    </a>
+                  </div>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Shell">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+              <mat-card *ngFor="let project of shell" class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition-shadow duration-300">
+                <mat-card-header class="flex items-center p-4 bg-gray-200">
+                  <div>
+                    <mat-card-title class="text-xl font-semibold text-gray-800">{{ project.name }}</mat-card-title>
+                    <mat-card-subtitle class="text-sm text-gray-500">
+                      <mat-chip class="bg-gray-300">{{ project.language }}</mat-chip>
+                    </mat-card-subtitle>
+                  </div>
+                </mat-card-header>
+    
+                <!-- Imagen del repositorio -->
+                <img mat-card-image 
+                     [src]="project.image ? project.image : 'https://www.svgrepo.com/show/448449/git-repo.svg'" 
+                     alt="Imagen del proyecto" 
+                     class="w-full object-cover h-48">
+    
+                <mat-card-content class="p-4">
+                  <p class="text-base text-gray-700 font-semibold">
+                    <span class="block mb-2">{{ project.description }}</span>
+                  </p>
+                </mat-card-content>
+    
+                <mat-card-actions class="flex justify-between p-4">
+                  <div class="flex items-center">
+                    <a href="{{ project.homepage }}" target="_blank" class="inline-flex items-center py-2 px-4 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                      <mat-icon class="mr-2">launch</mat-icon> Go to
+                    </a>
+                  </div>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+        </mat-tab>
+          
+  
+  
+       
+  
+      </mat-tab-group>
+    </div>
+  </div>
+  

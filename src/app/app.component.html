@@ -1,171 +1,21 @@
-<!--contenido-principal-->
-<div class="bg-gradient-to-r from-violet-500 to-fuchsia-500 ">
-    <!--Contenido Principal-->
-    <div class="sm:bg-stone-600">
-        <!--Header-->
-        <div class=" ml-2 mr-2  rounded-md  flex justify-center font-sans font-light text-xs w-auto ">        
-        <mat-toolbar class="sm:bg-stone-600">
-            <span class="sm:text-2xl text-cyan-400 md:text-6xl mt-5 mb-4" >Bienvenido a mi portafolio</span>
-            <span class="example-spacer"></span>
-            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-              <mat-icon>favorite</mat-icon>
-            </button>
-          </mat-toolbar> 
-        </div>
-        <!---------------------->
+<div class="bg-slate-300">
+  <!--navbar-->
+  <div>
+    <app-navbar/>
+  </div>
 
-        <!---Body>-->
-        <div class="mt-3 sm:bg-stone-600">
-           <!--Perfil-->
-            <div class="ml-2 mr-2 rounded-md font-serif font-semibold text-neutral-900 sm:bg-stone-600 ">
-              <mat-card class="example-card">
-                <div class=" sm:grid grid-cols-2 md:grid-cols-1">
-                  <!--photo-->
-                  <div class="flex m-auto  w-52 sm:w-96 mt-10 justify-center  ">
-                    <img mat-card-image src="https://oggabo.netlify.app/static/media/photo.d35f7af9f2dad14fb2f8.jpeg" alt="perfil" width="300px" height="300px">
-                  </div>
-                  <!--------->
-                  <div>
-                    <mat-card-header>
-                      <mat-card-title class="font-serif font-semibold text-neutral-900 md:text-2xl">Hola 🤗🤗</mat-card-title>
-                      <mat-card-subtitle class="font-serif font-semibold text-neutral-900 md:text-3xl mt-6">Mi nombre es Gabriel Vargas soy Estudiante de Desarrollo de Software</mat-card-subtitle>
-                    </mat-card-header>
-                    <mat-card-content class="md:text-xl mt-5">
-                      <p>Actualmente estoy estudiando en el Instituto Superior Técnologico "Los Andes",
-                        me gusta el desarrollo de Software tanto en web como para dispositivos moviles,
-                        las técnologias que más me  uso son react, angular para la web y flutter para movil,
-                        tambien me interesa el desarrollo backend con nestjs.
-                      </p>
- 
-                    </mat-card-content>
-                  
-                  </div>
-                </div>
-                </mat-card>
-            </div>   
-            <!----------->
-        </div>
-        <!---------------->
-            
-    </div>
-    <!--Contenido Secundario-->
-    <div class=" sm:bg-stone-600">
-      <!--Titulo-->
-        <div class="flex justify-center  font-extrabold text-2xl sm:text-3xl text-stone-950 sm:bg-stone-600">   
-          
-          <p class="m-3 md:text-4xl mt-5">PROYECTOS 🤗🤗</p>
-        </div>
-       
-        <!--Proyectos-->
-      <div class="sm:grid grid-cols-2 md:grid-cols-3  ">
-        <!--Proyect1-->
-        <div class="mt-3">
-          <mat-card class="ml-2 mr-2 rounded-md">
-            <mat-card-header class="flex justify-center">
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-subtitle>Pagina Web Unida Educativa "Emiliano Ortega Espinoza"</mat-card-subtitle>
-            </mat-card-header>
-            <div class="flex m-auto mb-3 w-52">
-              <img mat-card-image src="https://oggabo.netlify.app/static/media/proyecto-primero.43e186fa0a2a70852344.png" alt="first_proyect"  >
-            </div>
-            <mat-card-content>
-              <p class="mt-2">
-                Este página web fue editada con una plantilla ya existente, 
-                de está manera disminuimos el tiempo de desarrollo y nos 
-                permitio adptarla a nuestras necesidades
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button class="bg-emerald-500 rounded-md  hover:bg-emerald-600 ">
-                <a class="m-4" href="https://grand-begonia-be775e.netlify.app/" target="_blank">Ir al Sitio</a>
-              </button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
-       
-         <!--Proyect2-->
-         <div class="mt-3">
-          <mat-card class="ml-2 mr-2 rounded-md">
-            <mat-card-header class="flex justify-center">
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-subtitle>Comida Saludable</mat-card-subtitle>
-            </mat-card-header>
-            <div class="flex m-auto mb-3 w-52">
-              <img mat-card-image src="https://oggabo.netlify.app/static/media/proyecto-cuatro.e929d44b02afbd4df141.png" alt="first_proyect"  >
-            </div>
-            <mat-card-content>
-              <p class="mt-2">
-                Diseño y Elaboración de una página web con HTML y CSS ,
-                 dirigida a un restaurante de comida saludable
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button class="bg-emerald-500 rounded-md  hover:bg-emerald-600 ">
-                <a class="m-4" href="https://elegant-starlight-a65fab.netlify.app/index.html" target="_blank">Ir al Sitio</a>
-              </button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
+  <!--Presentation-->
+  <div>
+    <app-presentation/>
+  </div>
 
-           <!--Proyect3-->
-           <div class="mt-3">
-            <mat-card class="ml-2 mr-2 rounded-md">
-              <mat-card-header class="flex justify-center">
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-subtitle>Turismo Catamayo</mat-card-subtitle>
-              </mat-card-header>
-              <div class="flex m-auto mb-3 w-52">
-                <img mat-card-image src="https://oggabo.netlify.app/static/media/proyecto-cinco.18375375f035aebaaa00.png" alt="first_proyect"  >
-              </div>
-              <mat-card-content>
-                <p class="mt-2">
-                  Esta página web nos permite visualizar los lugares 
-                  turisticos de nuestro cantón catamayo
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-                <button class="bg-emerald-500 rounded-md  hover:bg-emerald-600 ">
-                  <a class="m-4" href="https://silver-starburst-166472.netlify.app/index.html" target="_blank">Ir al Sitio</a>
-                </button>
-              </mat-card-actions>
-            </mat-card>
-          </div>
+  <!--Proyects-->
+  <div>
+    <app-proyects/>
+  </div>
 
-      </div>
-          
-    </div>
-    <!--Contactos-->
-  
-    <div class="mt-2 sm:mt-0 md:mt-0" >
-      <mat-card class="">
-        <mat-card-content class="sm:bg-stone-600">
-          <mat-card-subtitle class=" sm:text-3xl text-blue-500 md:text-blue-900">Contactos</mat-card-subtitle>
-            <mat-card-content class="text-xs bg-stone-600 mb-3  sm:text-2xl mt-3 text-white">
-              ¡Hola a todos!
-              Quiero invitarlos a seguirnos en mis redes sociales para estar 
-              al tanto de todas las novedades y contenido especial.
-              ¡No se pierdan nada de lo que estamos preparando!
-              
-              ¡Esperamos verlos allí!
-            </mat-card-content>
-          <div class="flex flex-row space-x-4 sm:mt-3 justify-center ">
-              <!--facebook-->
-              <button mat-raised-button color="primary" class="">
-                <mat-icon>facebook</mat-icon>
-                <a href="https://www.facebook.com/GabO159357/">Sigueme</a>
-              </button>
-              <!--GitHub-->
-              <button mat-raised-button color="primary">
-                <mat-icon class="fab fa-git">GitHub</mat-icon>
-                <a href="https://github.com/Gabriel3002-maker">GitHub</a>
-              </button>
-              <!--Linkedin-->
-              <button mat-raised-button color="primary">
-                <mat-icon>Linkedin</mat-icon>
-                <a href="https://www.linkedin.com/in/gabriel-vargas-vargas-6953b1216/">Linkedin</a>
-              </button>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
+  <!--Footer-->
+  <div>
+    <app-footer/>
+  </div>
 </div>
