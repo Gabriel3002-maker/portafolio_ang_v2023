@@ -1,0 +1,15 @@
+.mat-tab {
+    height: 100%;  /* Esto ya está bien, ocupará toda la altura */
+    width: 100%;   /* Asegura que también ocupe todo el ancho */
+    background: linear-gradient(180deg, #04fafd, 5%, #119dff, 70%, #030423);
+    position: absolute;
+    
+  }
+
+.mat-card{
+    height: 100%;  /* Esto ya está bien, ocupará toda la altura */
+    width: 100%;   /* Asegura que también ocupe todo el ancho */
+    background: linear-gradient(180deg, #04fafd, 5%, #119dff, 70%, #030423);
+    position: absolute;
+    
+  }

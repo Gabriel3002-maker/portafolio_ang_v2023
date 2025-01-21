@@ -1,21 +1,24 @@
-<div class="bg-slate-300">
-  <!--navbar-->
-  <div>
-    <app-navbar/>
-  </div>
+<app-loader *ngIf="isLoading"></app-loader>
 
-  <!--Presentation-->
-  <div>
-    <app-presentation/>
-  </div>
+<div *ngIf="!isLoading" class="wrapper">
+  <app-navbar></app-navbar>
+  <app-presentation></app-presentation>
+  <app-proyects></app-proyects>
+  <app-footer></app-footer>
 
-  <!--Proyects-->
-  <div>
-    <app-proyects/>
-  </div>
-
-  <!--Footer-->
-  <div>
-    <app-footer/>
-  </div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
 </div>

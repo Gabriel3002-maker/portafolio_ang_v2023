@@ -1,14 +1,18 @@
-<div class="flex justify-center m-5">
+<app-loader *ngIf="isLoading"></app-loader>
+
+
+<div *ngIf="!isLoading">
+  <div class="flex justify-center m-5">
     <p class="text-3xl font-bold text-gray-800">Proyectos</p>
   </div>
   
-  <div class="flex justify-center m-2">
+  <div>
     <div >
       <mat-tab-group>
           
        
-        <mat-tab label="Python">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <mat-tab   label="Python">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 m-5">
               <mat-card *ngFor="let project of python" class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition-shadow duration-300">
                 <mat-card-header class="flex items-center p-4 bg-gray-200">
                   <div>
@@ -44,7 +48,7 @@
           
           <!-- Web Tab -->
         <mat-tab label="Typescript">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 m-5">
               <mat-card *ngFor="let project of typescript" class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition-shadow duration-300">
                 <mat-card-header class="flex items-center p-4 bg-gray-200">
                   <div>
@@ -79,7 +83,7 @@
         </mat-tab>
 
         <mat-tab label="Shell">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 m-5 ">
               <mat-card *ngFor="let project of shell" class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition-shadow duration-300">
                 <mat-card-header class="flex items-center p-4 bg-gray-200">
                   <div>
@@ -121,3 +125,4 @@
     </div>
   </div>
   
+</div>

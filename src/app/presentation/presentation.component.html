@@ -6,20 +6,18 @@
       <mat-card-subtitle>{{user?.login}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p class="text-base font-semibold ">
-        {{user?.bio}}
-      </p>
+      <div  class="flex justify-center">
+        <p class="text-base font-semibold ">
+          {{user?.bio}}
+        </p>
+      </div>
     </mat-card-content>
-    <mat-card-actions>
-      <mat-icon aria-hidden="false" aria-label="like" fontIcon="like">
-        
-      </mat-icon>
-      <mat-icon aria-hidden="false" aria-label="Favorite" fontIcon="favorite">
-      
-      </mat-icon>
 
-    </mat-card-actions>
+    <div class="flex justify-center">
+      <a href="https://drive.google.com/file/d/1Rrv04XBciYTjS3BqNi6ehNLOxQrTRIzw/view?usp=sharing" mat-flat-button color="primary">Descargar Curriculo</a>
+    </div>
   </mat-card>
+  
   
       
 </div>

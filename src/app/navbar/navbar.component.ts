@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  selectedSection: string = '';  
+  modalVisible: boolean = false;
 
+  openModal(section: string) {
+    this.selectedSection = section;
+    this.modalVisible = true;
+  }
+
+  closeModal() {
+    this.modalVisible = false;
+    this.selectedSection = ''; 
+  }
 }

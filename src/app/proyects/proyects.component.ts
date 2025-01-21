@@ -13,6 +13,8 @@ export class ProyectsComponent implements OnInit {
   python: any = [];
   shell: any = [];
   allProjects: any = [];
+  isLoading = true;
+
 
   constructor(private service: UsersService) {}
 
@@ -26,6 +28,7 @@ export class ProyectsComponent implements OnInit {
         this.projects = response;
         this.allProjects = response; // Guardamos todos los proyectos
         console.log("Projects:", this.projects);
+        this.isLoading = false;
         this.filterProjects(); // Filtramos por lenguaje
       },
       error: (error) => {
