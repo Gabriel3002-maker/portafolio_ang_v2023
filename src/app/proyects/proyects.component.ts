@@ -12,6 +12,8 @@ export class ProyectsComponent implements OnInit {
   typescript: any = [];
   python: any = [];
   shell: any = [];
+  html: any = [];
+  sharp:any = [];
   allProjects: any = [];
   isLoading = true;
 
@@ -43,5 +45,8 @@ export class ProyectsComponent implements OnInit {
     this.typescript = this.allProjects.filter((project: any) => project.language === 'TypeScript');
     this.python = this.allProjects.filter((project: any) => project.language === 'Python');
     this.shell = this.allProjects.filter((project:any)=> project.language === 'Shell');
+    this.html = this.allProjects.filter((project:any)=> project.language === 'HTML');
+    this.sharp = this.allProjects.filter((project:any)=> project.language === 'C#');
+
   }
 }
