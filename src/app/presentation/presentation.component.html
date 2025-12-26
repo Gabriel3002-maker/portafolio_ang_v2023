@@ -1,4 +1,4 @@
-<div class="flex justify-center">
+<div class="presentation-container">
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
@@ -6,18 +6,66 @@
       <mat-card-subtitle>{{user?.login}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <div  class="flex justify-center">
-        <p class="text-base font-semibold ">
+      <div class="flex justify-center">
+        <p class="text-base font-semibold">
           {{user?.bio}}
         </p>
       </div>
     </mat-card-content>
 
-    <div class="flex justify-center">
-      <a href="https://drive.google.com/file/d/1Rrv04XBciYTjS3BqNi6ehNLOxQrTRIzw/view?usp=sharing" mat-flat-button color="primary">Descargar Curriculo</a>
+    <div class="download-btn-container flex justify-center">
+      <button mat-flat-button color="primary" [matMenuTriggerFor]="cvMenu">
+        <mat-icon>download</mat-icon> {{ 'PRESENTATION.DOWNLOAD_CV' | translate }}
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+
+      <mat-menu #cvMenu="matMenu">
+        <a mat-menu-item href="https://drive.google.com/file/d/11Bh4bQ4tbswRSk4nZgWFWWxCP7DHMMiH/view?usp=drive_link"
+          target="_blank">
+          <mat-icon class="text-purple-400">settings_system_daydream</mat-icon>
+          <span>{{ 'PRESENTATION.CV_OPTIONS.ODOO' | translate }}</span>
+        </a>
+        <a mat-menu-item href="https://drive.google.com/file/d/1XpEk37cLcEKVrhaLXlF8mSdN7IoIZEW1/view?usp=drive_link"
+          target="_blank">
+          <mat-icon class="text-blue-400">code</mat-icon>
+          <span>{{ 'PRESENTATION.CV_OPTIONS.FULLSTACK' | translate }}</span>
+        </a>
+        <a mat-menu-item href="https://drive.google.com/file/d/1Rrv04XBciYTjS3BqNi6ehNLOxQrTRIzw/view?usp=drive_link"
+          target="_blank">
+          <mat-icon class="text-green-400">language</mat-icon>
+          <span>{{ 'PRESENTATION.CV_OPTIONS.SPANISH' | translate }}</span>
+        </a>
+      </mat-menu>
     </div>
   </mat-card>
-  
-  
-      
+</div>
+
+<!-- Specialization Cards Section -->
+<div class="skills-container grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 pb-20">
+  <!-- Odoo Card -->
+  <div class="skill-card odoo-card">
+    <div class="icon-wrapper">
+      <mat-icon>settings_system_daydream</mat-icon>
+    </div>
+    <h3>{{ 'PRESENTATION.SKILLS.ODOO_TITLE' | translate }}</h3>
+    <p>{{ 'PRESENTATION.SKILLS.ODOO_DESC' | translate }}</p>
+  </div>
+
+  <!-- Backend & AI Card -->
+  <div class="skill-card ai-card">
+    <div class="icon-wrapper">
+      <mat-icon>psychology</mat-icon>
+    </div>
+    <h3>{{ 'PRESENTATION.SKILLS.AI_TITLE' | translate }}</h3>
+    <p>{{ 'PRESENTATION.SKILLS.AI_DESC' | translate }}</p>
+  </div>
+
+  <!-- Mobile & Drones Card -->
+  <div class="skill-card drone-card">
+    <div class="icon-wrapper">
+      <mat-icon>flight</mat-icon>
+    </div>
+    <h3>{{ 'PRESENTATION.SKILLS.DRONE_TITLE' | translate }}</h3>
+    <p>{{ 'PRESENTATION.SKILLS.DRONE_DESC' | translate }}</p>
+  </div>
 </div>

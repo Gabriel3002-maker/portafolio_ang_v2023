@@ -1,7 +1,55 @@
 <footer>
-    <div class="flex justify-center">
-        <mat-toolbar>
-          <span class="text-xs justify-center ">Gabriel Vargas 2025 | Derechos Reservados</span>
-        </mat-toolbar>
+  <div class="footer-container">
+    <div class="footer-content">
+      <!-- Brand & Bio -->
+      <div class="footer-brand">
+        <h2>Gabriel Vargas</h2>
+        <p>
+          {{ 'FOOTER.BIO' | translate }}
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3>{{ 'FOOTER.LINKS_TITLE' | translate }}</h3>
+        <ul>
+          <li><a href="#"><mat-icon>chevron_right</mat-icon> {{ 'FOOTER.LINKS.HOME' | translate }}</a></li>
+          <li><a href="#"><mat-icon>chevron_right</mat-icon> {{ 'FOOTER.LINKS.SERVICES' | translate }}</a></li>
+          <li><a href="#"><mat-icon>chevron_right</mat-icon> {{ 'FOOTER.LINKS.PROJECTS' | translate }}</a></li>
+          <li><a href="#"><mat-icon>chevron_right</mat-icon> {{ 'FOOTER.LINKS.CONTACT' | translate }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h3>{{ 'FOOTER.SOCIAL_TITLE' | translate }}</h3>
+        <p class="mb-4 text-gray-400 text-sm">{{ 'FOOTER.SOCIAL_DESC' | translate }}</p>
+        <div class="social-icons">
+          <a href="https://github.com/Gabriel3002-maker" target="_blank" class="social-btn" aria-label="GitHub">
+            <mat-icon>code</mat-icon>
+            <!-- GitHub -->
+          </a>
+          <a href="https://www.linkedin.com/in/gabriel-vargas-vargas-6953b1216/" target="_blank" class="social-btn"
+            aria-label="LinkedIn">
+            <mat-icon>work</mat-icon>
+            <!-- LinkedIn -->
+          </a>
+          <a href="https://x.com/SuCode195246" target="_blank" class="social-btn" aria-label="Twitter">
+            <mat-icon>chat</mat-icon>
+            <!-- Twitter/X -->
+          </a>
+          <a href="mailto:gv853689@gmail.com" class="social-btn" aria-label="Email">
+            <mat-icon>email</mat-icon>
+          </a>
+        </div>
+      </div>
     </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>
+        &copy; 2025 {{ 'FOOTER.RIGHTS' | translate }} <span class="heart">♥</span> y Angular.
+      </p>
+    </div>
+  </div>
 </footer>

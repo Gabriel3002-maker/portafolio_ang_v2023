@@ -9,31 +9,31 @@ import { Observable, throwError } from 'rxjs';
 export class UsersService {
 
   private apiUrl = "https://api.github.com/users/Gabriel3002-maker";
-  private apiProyectsUrl = "https://api.github.com/users/Gabriel3002-maker/repos";
+  private apiProyectsUrl = "https://api.github.com/users/Gabriel3002-maker/repos?per_page=100";
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getInfoUser(){
+  getInfoUser() {
     return this.http.get<any>(this.apiUrl)
       .pipe(
-        retry(3),  
+        retry(3),
         tap(response => {
           // console.log("user", response);
         }),
-        catchError(this.handleError) 
+        catchError(this.handleError)
       );
   }
 
-  getInfoProyects(){
+  getInfoProyects() {
     return this.http.get<any[]>(this.apiProyectsUrl)
       .pipe(
-        retry(3), 
+        retry(3),
         tap(response => {
           // console.log("proyects", response);
         }),
-        catchError(this.handleError)  
+        catchError(this.handleError)
       );
   }
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,8 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  selectedSection: string = '';  
+  selectedSection: string = '';
   modalVisible: boolean = false;
+  currentLang: string = 'es';
+
+  constructor(private translationService: TranslationService) {
+    this.translationService.currentLang$.subscribe(lang => {
+      this.currentLang = lang;
+    });
+  }
 
   openModal(section: string) {
     this.selectedSection = section;
@@ -16,6 +24,10 @@ export class NavbarComponent {
 
   closeModal() {
     this.modalVisible = false;
-    this.selectedSection = ''; 
+    this.selectedSection = '';
+  }
+
+  switchLanguage(lang: string) {
+    this.translationService.use(lang);
   }
 }

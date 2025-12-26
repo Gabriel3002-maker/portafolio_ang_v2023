@@ -1,9 +1,253 @@
+/* Presentation Card Container */
+.presentation-container {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
 .example-card {
-    max-width: 600px;
+  max-width: 700px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(15, 12, 41, 0.8) 0%, rgba(48, 43, 99, 0.8) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  padding: 32px;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.example-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c);
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.example-card:hover::before {
+  opacity: 0.5;
+}
+
+.example-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(102, 126, 234, 0.4);
+}
+
+.example-header-image {
+  background-image: url('https://avatars.githubusercontent.com/u/75583405?v=4');
+  background-size: cover;
+  background-position: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid rgba(102, 126, 234, 0.5);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.example-card:hover .example-header-image {
+  border-color: #667eea;
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.8);
+  transform: scale(1.05);
+}
+
+mat-card-header {
+  margin-bottom: 24px;
+}
+
+mat-card-title {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px !important;
+}
+
+mat-card-subtitle {
+  font-size: 18px !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-weight: 500 !important;
+}
+
+mat-card-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+/* Download Button */
+.download-btn-container {
+  margin-top: 24px;
+}
+
+.download-btn-container a {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 36px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  text-transform: none;
+}
+
+.download-btn-container a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Skills Section */
+.skills-container {
+  margin-top: -40px;
+  /* Overlap effect or just closer spacing */
+  position: relative;
+  z-index: 10;
+}
+
+.skill-card {
+  background: rgba(15, 12, 41, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.4s ease;
+}
+
+.skill-card mat-icon {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  transition: all 0.4s ease;
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Odoo Card Specifics */
+.odoo-card {
+  border-bottom: 3px solid #714B67;
+  /* Odoo Purple */
+}
+
+.odoo-card:hover {
+  box-shadow: 0 20px 40px rgba(113, 75, 103, 0.3);
+}
+
+.odoo-card:hover .icon-wrapper {
+  background: linear-gradient(135deg, #714B67 0%, #a26ea1 100%);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.odoo-card mat-icon {
+  color: #dcbadd;
+}
+
+.odoo-card:hover mat-icon {
+  color: #fff;
+}
+
+/* AI Card Specifics */
+.ai-card {
+  border-bottom: 3px solid #4facfe;
+}
+
+.ai-card:hover {
+  box-shadow: 0 20px 40px rgba(79, 172, 254, 0.3);
+}
+
+.ai-card:hover .icon-wrapper {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.ai-card mat-icon {
+  color: #8fd3fe;
+}
+
+.ai-card:hover mat-icon {
+  color: #fff;
+}
+
+/* Drone Card Specifics */
+.drone-card {
+  border-bottom: 3px solid #43e97b;
+}
+
+.drone-card:hover {
+  box-shadow: 0 20px 40px rgba(67, 233, 123, 0.3);
+}
+
+.drone-card:hover .icon-wrapper {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.drone-card mat-icon {
+  color: #9fffd0;
+}
+
+.drone-card:hover mat-icon {
+  color: #fff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  
-  .example-header-image {
-    background-image: url('https://avatars.githubusercontent.com/u/75583405?v=4');
-    background-size: cover;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}

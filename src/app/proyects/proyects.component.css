@@ -1,15 +1,205 @@
-.mat-tab {
-    height: 100%;  /* Esto ya está bien, ocupará toda la altura */
-    width: 100%;   /* Asegura que también ocupe todo el ancho */
-    background: linear-gradient(180deg, #04fafd, 5%, #119dff, 70%, #030423);
-    position: absolute;
-    
+/* Projects Section */
+.projects-section {
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title p {
+  font-size: 42px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Tab Styling */
+::ng-deep .mat-mdc-tab-group {
+  background: transparent !important;
+}
+
+::ng-deep .mat-mdc-tab-labels {
+  background: rgba(15, 12, 41, 0.6) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 8px;
+  margin-bottom: 40px;
+}
+
+::ng-deep .mat-mdc-tab {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+::ng-deep .mat-mdc-tab:hover {
+  color: #667eea !important;
+}
+
+::ng-deep .mat-mdc-tab.mdc-tab--active {
+  color: #ffffff !important;
+}
+
+::ng-deep .mat-mdc-tab-indicator {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+  height: 3px !important;
+  border-radius: 3px !important;
+}
+
+/* Project Cards */
+.project-card {
+  background: linear-gradient(135deg, rgba(15, 12, 41, 0.9) 0%, rgba(48, 43, 99, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(102, 126, 234, 0.4);
+  border-color: rgba(102, 126, 234, 0.5);
+}
+
+/* Card Header */
+.project-card mat-card-header {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px !important;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card mat-card-title {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 8px !important;
+}
+
+.project-card mat-card-subtitle {
+  margin-top: 8px !important;
+}
+
+.project-card mat-chip {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Card Image */
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Card Content */
+.project-card mat-card-content {
+  padding: 20px !important;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card mat-card-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 60px;
+}
+
+/* Card Actions */
+.project-card mat-card-actions {
+  padding: 16px 20px !important;
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  justify-content: flex-end;
+  /* Align button to the right for better look? Or left? Original was between but only 1 item. Let's start left. */
+}
+
+.project-card mat-card-actions a {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-card mat-card-actions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.project-card mat-card-actions mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
-.mat-card{
-    height: 100%;  /* Esto ya está bien, ocupará toda la altura */
-    width: 100%;   /* Asegura que también ocupe todo el ancho */
-    background: linear-gradient(180deg, #04fafd, 5%, #119dff, 70%, #030423);
-    position: absolute;
-    
+  .section-title p {
+    font-size: 32px;
   }
+}
